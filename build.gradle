@@ -28,7 +28,11 @@ dependencies {
         exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
     }
 }
-task stage {
+task stage(type: Copy, dependsOn: [clean, build]) {
+}
+stage.mustRunAfter(clean)
 
+clean << {
+    project.file('jsonServer.war').delete()
 }
 
