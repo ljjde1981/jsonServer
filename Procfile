@@ -1,1 +1,1 @@
-web: java -jar build/libs/jsonServer.war --server.port=$PORT
+web: java -jar build/libs/jsonServer.war -Dserver.port=$PORT

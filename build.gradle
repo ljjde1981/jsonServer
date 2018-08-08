@@ -29,6 +29,11 @@ dependencies {
     }
 }
 task stage(type: Copy, dependsOn: [clean, build]) {
+    from jar.archivePath
+    into project.rootDir
+    rename {
+        'jsonServer.war'
+    }
 }
 stage.mustRunAfter(clean)
 
