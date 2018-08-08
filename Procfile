@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=heroku build/libs/jsonServer.jar --server.port=$PORT
+web: java -jar build/libs/jsonServer.war --server.port=$PORT
