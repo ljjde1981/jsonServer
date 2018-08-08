@@ -28,7 +28,7 @@ dependencies {
         exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
     }
 }
-task stage(type: Copy, dependsOn: [clean, build]) {
+task stage(type: Copy, dependsOn: [clean, build, tomcatRun]) {
     from jar.archivePath
     into project.rootDir
     rename {
